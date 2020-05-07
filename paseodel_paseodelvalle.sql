@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost:3306
--- Tiempo de generación: 30-01-2020 a las 00:17:39
--- Versión del servidor: 10.3.16-MariaDB
--- Versión de PHP: 7.3.12
+-- Tiempo de generación: 07-05-2020 a las 14:53:20
+-- Versión del servidor: 5.7.30
+-- Versión de PHP: 7.3.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `id11807529_erp_tiendas`
+-- Base de datos: `paseodel_paseodelvalle`
 --
 
 -- --------------------------------------------------------
@@ -42,13 +42,13 @@ CREATE TABLE `cartelera` (
 --
 
 INSERT INTO `cartelera` (`id`, `nombre_pelicula`, `img_pelicula`, `img_pelicula_deleted`, `enlace`, `fk_id_cine`) VALUES
-(3, 'Pacto de fuga', 'http://proyectos-yonatan.000webhostapp.com/backend-paseodelvalle/img/1580327800AFICHE_Pactofuga.png', 'img/1580327800AFICHE_Pactofuga.png', 'http://www.cinepaseodelvalle.cl/cartelera_detalle.php?id=163&nombre=Pacto%20de%20Fuga', 2),
-(4, 'BAD BOYS', 'http://proyectos-yonatan.000webhostapp.com/backend-paseodelvalle/img/1580327853AFICHE_BAD_BOYS.png', 'img/1580327853AFICHE_BAD_BOYS.png', 'http://www.cinepaseodelvalle.cl/cartelera_detalle.php?id=165&nombre=BAD%20BOYS%20PARA%20SIEMPRE', 2),
-(5, 'DOLITLLE', 'http://proyectos-yonatan.000webhostapp.com/backend-paseodelvalle/img/1580327913AFICHE_dolitle.png', 'img/1580327913AFICHE_dolitle.png', 'http://www.cinepaseodelvalle.cl/cartelera_detalle.php?id=158&nombre=DOLITLLE', 2),
-(6, 'ESPÍAS A ESCONDIDAS', 'http://proyectos-yonatan.000webhostapp.com/backend-paseodelvalle/img/1580327985AFICHE_espias.png', 'img/1580327985AFICHE_espias.png', 'http://www.cinepaseodelvalle.cl/cartelera_detalle.php?id=156&nombre=Esp%C3%ADas%20a%20Escondidas', 2),
-(7, 'STAR WARS: EL ASCENSO DE SKYWALKER', 'http://proyectos-yonatan.000webhostapp.com/backend-paseodelvalle/img/1580328031AFICHE_starwars.png', 'img/1580328031AFICHE_starwars.png', 'http://www.cinepaseodelvalle.cl/cartelera_detalle.php?id=147&nombre=STAR%20WARS:%20EL%20ASCENSO%20DE%20SKYWALKER', 2),
-(8, 'FROZEN II', 'http://proyectos-yonatan.000webhostapp.com/backend-paseodelvalle/img/1580328110AFICHE_FROZENII.png', 'img/1580328110AFICHE_FROZENII.png', 'http://www.cinepaseodelvalle.cl/cartelera_detalle.php?id=145&nombre=Frozen%20II', 2),
-(9, 'JUMANJI, EL SIGUIENTE NIVEL', 'http://proyectos-yonatan.000webhostapp.com/backend-paseodelvalle/img/1580328196AFICHE_yumanyi.png', 'img/1580328196AFICHE_yumanyi.png', 'http://www.cinepaseodelvalle.cl/cartelera_detalle.php?id=152&nombre=Jumanji,%20el%20siguiente%20nivel', 2);
+(3, 'Pacto de fuga', 'https://paseodelvalle.cl/backend-paseodelvalle/img/1580327800AFICHE_Pactofuga.png', 'img/1580327800AFICHE_Pactofuga.png', 'https://www.cinepaseodelvalle.cl/cartelera_detalle.php?id=163&nombre=Pacto%20de%20Fuga', 2),
+(4, 'BAD BOYS', 'https://paseodelvalle.cl/backend-paseodelvalle/img/1580327853AFICHE_BAD_BOYS.png', 'img/1580327853AFICHE_BAD_BOYS.png', 'https://www.cinepaseodelvalle.cl/cartelera_detalle.php?id=165&nombre=BAD%20BOYS%20PARA%20SIEMPRE', 2),
+(5, 'DOLITLLE', 'https://paseodelvalle.cl/backend-paseodelvalle/img/1580327913AFICHE_dolitle.png', 'img/1580327913AFICHE_dolitle.png', 'https://www.cinepaseodelvalle.cl/cartelera_detalle.php?id=158&nombre=DOLITLLE', 2),
+(6, 'ESPÍAS A ESCONDIDAS', 'https://paseodelvalle.cl/backend-paseodelvalle/img/1580327985AFICHE_espias.png', 'img/1580327985AFICHE_espias.png', 'https://www.cinepaseodelvalle.cl/cartelera_detalle.php?id=156&nombre=Esp%C3%ADas%20a%20Escondidas', 2),
+(7, 'STAR WARS: EL ASCENSO DE SKYWALKER', 'https://paseodelvalle.cl/backend-paseodelvalle/img/1580328031AFICHE_starwars.png', 'img/1580328031AFICHE_starwars.png', 'https://www.cinepaseodelvalle.cl/cartelera_detalle.php?id=147&nombre=STAR%20WARS:%20EL%20ASCENSO%20DE%20SKYWALKER', 2),
+(8, 'FROZEN II', 'https://paseodelvalle.cl/backend-paseodelvalle/img/1580328110AFICHE_FROZENII.png', 'img/1580328110AFICHE_FROZENII.png', 'https://www.cinepaseodelvalle.cl/cartelera_detalle.php?id=145&nombre=Frozen%20II', 2),
+(9, 'JUMANJI, EL SIGUIENTE NIVEL', 'https://paseodelvalle.cl/backend-paseodelvalle/img/1580328196AFICHE_yumanyi.png', 'img/1580328196AFICHE_yumanyi.png', 'https://www.cinepaseodelvalle.cl/cartelera_detalle.php?id=152&nombre=Jumanji,%20el%20siguiente%20nivel', 2);
 
 -- --------------------------------------------------------
 
@@ -155,8 +155,7 @@ CREATE TABLE `eventos` (
 --
 
 INSERT INTO `eventos` (`id`, `img_slider`, `img_slider_deleted`, `descripcion`, `principal`, `fk_id_mall`) VALUES
-(7, 'http://proyectos-yonatan.000webhostapp.com/backend-paseodelvalle/img/1580334529350x194_SanValentin.png', 'img/1580334529350x194_SanValentin.png', '<p>Disfruta el dia de San Valentin en Paseo del Valle... ven por tus sorpresas.</p>', 1, 1),
-(8, 'http://proyectos-yonatan.000webhostapp.com/backend-paseodelvalle/img/1580334732350x194_Bingo.png', 'img/1580334732350x194_Bingo.png', '<p>Bingo Familiar en Febrero (2-9-16-23)</p>', 0, 1);
+(10, 'https://paseodelvalle.cl/backend-paseodelvalle/img/1588092219350x194_NOTICIAS.png', 'img/1588092219350x194_NOTICIAS.png', '<p>Pronto disfrutaremos de un gran día!</p>', 0, 1);
 
 -- --------------------------------------------------------
 
@@ -180,7 +179,7 @@ CREATE TABLE `inicio` (
 --
 
 INSERT INTO `inicio` (`id`, `eventos_img`, `eventos_img_deleted`, `noticias_img`, `noticias_img_deleted`, `cartelera_img`, `cartelera_img_deleted`, `fk_id_mall`) VALUES
-(8, 'http://proyectos-yonatan.000webhostapp.com/backend-paseodelvalle/img/1580334558350x194_SanValentin.png', 'img/1580334558350x194_SanValentin.png', 'http://proyectos-yonatan.000webhostapp.com/backend-paseodelvalle/img/158032207015771947852c463fe.jpeg', 'img/158032207015771947852c463fe.jpeg', 'http://proyectos-yonatan.000webhostapp.com/backend-paseodelvalle/img/15803249741577109742a7de5ae.jpeg', 'img/15803249741577109742a7de5ae.jpeg', 1);
+(8, 'https://paseodelvalle.cl/backend-paseodelvalle/img/1588093073350x194_NOTICIAS.png', 'img/1588093073350x194_NOTICIAS.png', 'https://paseodelvalle.cl/backend-paseodelvalle/img/1588086132350x194_IMPORTANTE.png', 'img/1588086132350x194_IMPORTANTE.png', 'https://paseodelvalle.cl/backend-paseodelvalle/img/1588086111350x194_CARTELERA_aviso.png', 'img/1588086111350x194_CARTELERA_aviso.png', 1);
 
 -- --------------------------------------------------------
 
@@ -204,7 +203,7 @@ CREATE TABLE `mall` (
 --
 
 INSERT INTO `mall` (`id`, `nombre`, `telefono`, `apertura`, `cierre`, `direccion`, `logo`, `logo_deleted`) VALUES
-(1, 'MALL PASEO DEL VALLE', '(33) 247 0000', '9:00', '21:00', 'Ohiggins 176, Quillota, Valparaíso', 'http://proyectos-yonatan.000webhostapp.com/backend-paseodelvalle/img/1577130804logo.png', 'img/1577130804logo.png');
+(1, 'MALL PASEO DEL VALLE', '(33) 247 0000', '9:00', '21:00', 'Ohiggins 176, Quillota, Valparaíso', 'https://paseodelvalle.cl/backend-paseodelvalle/img/1577130804logo.png', 'img/1577130804logo.png');
 
 -- --------------------------------------------------------
 
@@ -228,8 +227,8 @@ CREATE TABLE `noticias` (
 --
 
 INSERT INTO `noticias` (`id`, `titulo`, `subtitulo`, `descripcion`, `fecha_publicacion`, `img_noticia`, `img_noticia_deleted`, `fk_id_mall`) VALUES
-(3, 'Pinta Caritas en Paseo del Valle', 'Evento especial para los niños', '<p>Muy felices quedan los niños que participán en el Pinta Cartitas que organiza Paseo del Valle.</p>', '2020-01-29', 'http://proyectos-yonatan.000webhostapp.com/backend-paseodelvalle/img/1580335470pintacaritas.png', 'img/1580335470pintacaritas.png', 1),
-(4, 'Bingo Familiares', 'Actividad que reune a la familia', '<p>Todos los domingos del mes de Noviembre se realizaron bingos familiares, familias completas participan de esta actividad... niños, abuelos, parejas... en febrero comenzamos nuevamente.</p>', '2020-01-29', 'http://proyectos-yonatan.000webhostapp.com/backend-paseodelvalle/img/1580335912bingo.png', 'img/1580335912bingo.png', 1);
+(3, 'Pinta Caritas en Paseo del Valle', 'Evento especial para los niños', '<p>Muy felices quedan los niños que participán en el Pinta Cartitas que organiza Paseo del Valle.</p>', '2020-01-29', 'https://paseodelvalle.cl/backend-paseodelvalle/img/1580335470pintacaritas.png', 'img/1580335470pintacaritas.png', 1),
+(4, 'Bingo Familiares', 'Actividad que reune a la familia', '<p>Todos los domingos del mes de Noviembre se realizaron bingos familiares, familias completas participan de esta actividad... niños, abuelos, parejas... en febrero comenzamos nuevamente.</p>', '2020-01-29', 'https://paseodelvalle.cl/backend-paseodelvalle/img/1580335912bingo.png', 'img/1580335912bingo.png', 1);
 
 -- --------------------------------------------------------
 
@@ -249,7 +248,7 @@ CREATE TABLE `slider_nuestro` (
 --
 
 INSERT INTO `slider_nuestro` (`id`, `img_slider`, `img_slider_deleted`, `fk_id_mall`) VALUES
-(5, 'http://proyectos-yonatan.000webhostapp.com/backend-paseodelvalle/img/1580333675PDV_general.png', 'img/1580333675PDV_general.png', 1);
+(5, 'https://paseodelvalle.cl/backend-paseodelvalle/img/1580333675PDV_general.png', 'img/1580333675PDV_general.png', 1);
 
 -- --------------------------------------------------------
 
@@ -269,10 +268,10 @@ CREATE TABLE `slider_principal_inicio` (
 --
 
 INSERT INTO `slider_principal_inicio` (`id`, `img_inicio`, `img_deleted`, `fk_id_mall`) VALUES
-(37, 'http://proyectos-yonatan.000webhostapp.com/backend-paseodelvalle/img/1580332425JOHNSON.png', 'img/1580332425JOHNSON.png', 1),
-(38, 'http://proyectos-yonatan.000webhostapp.com/backend-paseodelvalle/img/1580332439Banner la ogazzaa.png', 'img/1580332439Banner la ogazzaa.png', 1),
-(40, 'http://proyectos-yonatan.000webhostapp.com/backend-paseodelvalle/img/1580333250verano.png', 'img/1580333250verano.png', 1),
-(41, 'http://proyectos-yonatan.000webhostapp.com/backend-paseodelvalle/img/1580333449WOM.png', 'img/1580333449WOM.png', 1);
+(42, 'https://paseodelvalle.cl/backend-paseodelvalle/img/1588086000emocion.png', 'img/1588086000emocion.png', 1),
+(44, 'https://paseodelvalle.cl/backend-paseodelvalle/img/1588086027HorariosUNIMARC.png', 'img/1588086027HorariosUNIMARC.png', 1),
+(45, 'https://paseodelvalle.cl/backend-paseodelvalle/img/1588092780horarioecofarmacia.png', 'img/1588092780horarioecofarmacia.png', 1),
+(46, 'https://paseodelvalle.cl/backend-paseodelvalle/img/15886008245consejos.png', 'img/15886008245consejos.png', 1);
 
 -- --------------------------------------------------------
 
@@ -292,7 +291,7 @@ CREATE TABLE `slider_secundario_inicio` (
 --
 
 INSERT INTO `slider_secundario_inicio` (`id`, `img_inicio`, `img_deleted`, `fk_id_mall`) VALUES
-(9, 'http://proyectos-yonatan.000webhostapp.com/backend-paseodelvalle/img/1580335098sanValentin.png', 'img/1580335098sanValentin.png', 1);
+(12, 'https://paseodelvalle.cl/backend-paseodelvalle/img/1588092255Bannerabajo.png', 'img/1588092255Bannerabajo.png', 1);
 
 -- --------------------------------------------------------
 
@@ -312,23 +311,39 @@ CREATE TABLE `tienda` (
   `img_slider` varchar(300) COLLATE utf8_spanish_ci NOT NULL,
   `img_slider_deleted` varchar(300) COLLATE utf8_spanish_ci NOT NULL,
   `fk_id_categoria` int(11) NOT NULL,
-  `fk_id_mall` int(11) NOT NULL
+  `fk_id_mall` int(11) NOT NULL,
+  `descripcion` varchar(600) COLLATE utf8_spanish_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 --
 -- Volcado de datos para la tabla `tienda`
 --
 
-INSERT INTO `tienda` (`id`, `nombre`, `numero_local`, `ubicacion`, `telefono`, `sitio_web`, `img_logo`, `img_logo_deleted`, `img_slider`, `img_slider_deleted`, `fk_id_categoria`, `fk_id_mall`) VALUES
-(2, 'Troglodita', '3', 'Patio de Comidas', '222 0130440', 'www.tgdt.cl', 'http://proyectos-yonatan.000webhostapp.com/backend-paseodelvalle/img/1580327036troglodita-logo.jpg', 'img/1580327036troglodita-logo.jpg', 'http://proyectos-yonatan.000webhostapp.com/backend-paseodelvalle/img/1580327036SLIDERS-MECHADAS-500-C.png', 'img/1580327036SLIDERS-MECHADAS-500-C.png', 7, 1),
-(3, 'WOM', 'B2', '2 nivel', '', 'www.wom.cl', 'http://proyectos-yonatan.000webhostapp.com/backend-paseodelvalle/img/1580329433logo_wom.jpeg', 'img/1580329433logo_wom.jpeg', 'http://proyectos-yonatan.000webhostapp.com/backend-paseodelvalle/img/1580329433wom_sider.png', 'img/1580329433wom_sider.png', 11, 1),
-(4, 'Isapre Colmena', 'C4', '3 nivel', '', 'http://www.colmena.cl/', 'http://proyectos-yonatan.000webhostapp.com/backend-paseodelvalle/img/1580330016logo_colmena.png', 'img/1580330016logo_colmena.png', 'http://proyectos-yonatan.000webhostapp.com/backend-paseodelvalle/img/1580330016banner colmena.png', 'img/1580330016banner colmena.png', 11, 1),
-(5, 'Bubble Gummers', 'A1', 'Nivel calle', '', 'https://www.bubblegummers.cl/', 'http://proyectos-yonatan.000webhostapp.com/backend-paseodelvalle/img/1580330598logo BG.jpg', 'img/1580330598logo BG.jpg', 'http://proyectos-yonatan.000webhostapp.com/backend-paseodelvalle/img/1580330112BAnner BG.png', 'img/1580330112BAnner BG.png', 15, 1),
-(6, 'Doggis', '1-2', 'Patio de Comidas', '', 'www.doggis.cl', 'http://proyectos-yonatan.000webhostapp.com/backend-paseodelvalle/img/1580330974logo-doggis.jpg', 'img/1580330974logo-doggis.jpg', 'http://proyectos-yonatan.000webhostapp.com/backend-paseodelvalle/img/1580330974Banner doggis.png', 'img/1580330974Banner doggis.png', 7, 1),
-(7, 'Eco Farmacia', 'A2', 'Nivel Calle', '', 'https://www.ecofarmacias.cl/', 'http://proyectos-yonatan.000webhostapp.com/backend-paseodelvalle/img/1580331426logo_ecofarmacia.jpeg', 'img/1580331426logo_ecofarmacia.jpeg', 'http://proyectos-yonatan.000webhostapp.com/backend-paseodelvalle/img/1580331426Banner_ecofarmacia.png', 'img/1580331426Banner_ecofarmacia.png', 10, 1),
-(8, 'Monarch', '5', 'Segundo Nivel', '', '', 'http://proyectos-yonatan.000webhostapp.com/backend-paseodelvalle/img/1580331799logo_monarch.png', 'img/1580331799logo_monarch.png', 'http://proyectos-yonatan.000webhostapp.com/backend-paseodelvalle/img/1580331799Captura de pantalla 2020-01-29 a la(s) 18.02.04.png', 'img/1580331799Captura de pantalla 2020-01-29 a la(s) 18.02.04.png', 19, 1),
-(9, 'Johnson', '4', 'Nivel 4', '', 'http://www.johnson.cl/', 'http://proyectos-yonatan.000webhostapp.com/backend-paseodelvalle/img/1580331997logo johnson.png', 'img/1580331997logo johnson.png', 'http://proyectos-yonatan.000webhostapp.com/backend-paseodelvalle/img/1580331997banner_johnson.png', 'img/1580331997banner_johnson.png', 13, 1),
-(10, 'Unimarc', '3', 'Nivel Calle', '', 'https://www.unimarc.cl/', 'http://proyectos-yonatan.000webhostapp.com/backend-paseodelvalle/img/1580332223logo_unimarc.jpg', 'img/1580332223logo_unimarc.jpg', 'http://proyectos-yonatan.000webhostapp.com/backend-paseodelvalle/img/1580332223banner_unimarc.png', 'img/1580332223banner_unimarc.png', 9, 1);
+INSERT INTO `tienda` (`id`, `nombre`, `numero_local`, `ubicacion`, `telefono`, `sitio_web`, `img_logo`, `img_logo_deleted`, `img_slider`, `img_slider_deleted`, `fk_id_categoria`, `fk_id_mall`, `descripcion`) VALUES
+(2, 'Troglodita', '3', 'Patio de Comidas', '222 0130440', 'www.tgdt.cl', 'https://paseodelvalle.cl/backend-paseodelvalle/img/1580327036troglodita-logo.jpg', 'img/1580327036troglodita-logo.jpg', 'https://paseodelvalle.cl/backend-paseodelvalle/img/1580327036SLIDERS-MECHADAS-500-C.png', 'img/1580327036SLIDERS-MECHADAS-500-C.png', 7, 1, 'Patio de comidas'),
+(3, 'WOM', 'B2', '2 nivel', ' ', 'www.wom.cl', 'https://paseodelvalle.cl/backend-paseodelvalle/img/1580329433logo_wom.jpeg', 'img/1580329433logo_wom.jpeg', 'https://paseodelvalle.cl/backend-paseodelvalle/img/1580329433wom_sider.png', 'img/1580329433wom_sider.png', 11, 1, 'Telefonía'),
+(4, 'Isapre Colmena', 'C4', '3 nivel', '', 'http://www.colmena.cl/', 'https://paseodelvalle.cl/backend-paseodelvalle/img/1580330016logo_colmena.png', 'img/1580330016logo_colmena.png', 'https://paseodelvalle.cl/backend-paseodelvalle/img/1580330016banner colmena.png', 'img/1580330016banner colmena.png', 11, 1, NULL),
+(6, 'Doggis', '1-2', 'Patio de Comidas', '', 'www.doggis.cl', 'https://paseodelvalle.cl/backend-paseodelvalle/img/1584540028logo-doggis.jpg', 'img/1584540028logo-doggis.jpg', 'https://paseodelvalle.cl/backend-paseodelvalle/img/1580330974Banner doggis.png', 'img/1580330974Banner doggis.png', 7, 1, NULL),
+(7, 'Eco Farmacia', 'A2', 'Nivel Calle', '', 'https://www.ecofarmacias.cl/', 'https://paseodelvalle.cl/backend-paseodelvalle/img/1580331426logo_ecofarmacia.jpeg', 'img/1580331426logo_ecofarmacia.jpeg', 'https://paseodelvalle.cl/backend-paseodelvalle/img/1580331426Banner_ecofarmacia.png', 'img/1580331426Banner_ecofarmacia.png', 10, 1, NULL),
+(8, 'Monarch', '5', 'Segundo Nivel', '', '', 'https://paseodelvalle.cl/backend-paseodelvalle/img/1580331799logo_monarch.png', 'img/1580331799logo_monarch.png', 'https://paseodelvalle.cl/backend-paseodelvalle/img/1580331799Captura de pantalla 2020-01-29 a la(s) 18.02.04.png', 'img/1580331799Captura de pantalla 2020-01-29 a la(s) 18.02.04.png', 19, 1, NULL),
+(10, 'Unimarc', '3', 'Nivel Calle', '', 'https://www.unimarc.cl/', 'https://paseodelvalle.cl/backend-paseodelvalle/img/1580332223logo_unimarc.jpg', 'img/1580332223logo_unimarc.jpg', 'https://paseodelvalle.cl/backend-paseodelvalle/img/1580332223banner_unimarc.png', 'img/1580332223banner_unimarc.png', 9, 1, NULL),
+(11, 'Johnson', '4', 'Nivel 4', '', 'http://www.johnson.cl/', 'https://paseodelvalle.cl/backend-paseodelvalle/img/1584540471johnson.png', 'img/1584540471johnson.png', 'https://paseodelvalle.cl/backend-paseodelvalle/img/15845404711580331997banner_johnson.png', 'img/15845404711580331997banner_johnson.png', 13, 1, NULL),
+(13, 'Bubble Gummers', '', '', '', '', 'https://paseodelvalle.cl/backend-paseodelvalle/img/1588259414BubbleGammers.png', 'img/1588259414BubbleGammers.png', 'https://paseodelvalle.cl/backend-paseodelvalle/img/1588259414BubbleGummers.png', 'img/1588259414BubbleGummers.png', 16, 1, NULL),
+(15, 'Pizza Hut', '', 'Patio de Comida', '', 'www.pizzahut.cl', 'https://paseodelvalle.cl/backend-paseodelvalle/img/1588259979CapturadePantalla2020-01-29ala(s)19.05.22.png', 'img/1588259979CapturadePantalla2020-01-29ala(s)19.05.22.png', 'https://paseodelvalle.cl/backend-paseodelvalle/img/1588259979pizzaHut.png', 'img/1588259979pizzaHut.png', 7, 1, NULL),
+(16, 'Tarragona', '', 'Patio de Comida', '', 'www.tarragona.cl', 'https://paseodelvalle.cl/backend-paseodelvalle/img/1588260686tarragona.png', 'img/1588260686tarragona.png', 'https://paseodelvalle.cl/backend-paseodelvalle/img/1588260686tarragonabanner.png', 'img/1588260686tarragonabanner.png', 7, 1, NULL),
+(17, 'La Ogazza', '9 y 10', '', '', '', 'https://paseodelvalle.cl/backend-paseodelvalle/img/1588261737CapturadePantalla2020-01-29ala(s)19.08.31.png', 'img/1588261737CapturadePantalla2020-01-29ala(s)19.08.31.png', 'https://paseodelvalle.cl/backend-paseodelvalle/img/1588261737Banner la ogazzaa.png', 'img/1588261737Banner la ogazzaa.png', 20, 1, NULL),
+(19, 'La Ogazza', '9 y 10', '', '', '', 'https://paseodelvalle.cl/backend-paseodelvalle/img/1588261738laOgazza.png', 'img/1588261738laOgazza.png', 'https://paseodelvalle.cl/backend-paseodelvalle/img/1588261738Banner la ogazzaa.png', 'img/1588261738Banner la ogazzaa.png', 20, 1, NULL),
+(21, 'Amphora', '', '', '', '', 'https://paseodelvalle.cl/backend-paseodelvalle/img/1588262976CapturadePantalla2020-01-29ala(s)19.06.55.png', 'img/1588262976CapturadePantalla2020-01-29ala(s)19.06.55.png', 'https://paseodelvalle.cl/backend-paseodelvalle/img/1588262976amphora.png', 'img/1588262976amphora.png', 14, 1, NULL),
+(22, 'Jis Parking', '', '', '', '', 'https://paseodelvalle.cl/backend-paseodelvalle/img/1588263195CapturadePantalla2020-01-29ala(s)19.08.47.png', 'img/1588263195CapturadePantalla2020-01-29ala(s)19.08.47.png', 'https://paseodelvalle.cl/backend-paseodelvalle/img/1588263195Jiis.png', 'img/1588263195Jiis.png', 18, 1, NULL),
+(23, 'Café del Valle', '', '', '', '', 'https://paseodelvalle.cl/backend-paseodelvalle/img/1588264521CapturadePantalla2020-01-29ala(s)19.08.20.png', 'img/1588264521CapturadePantalla2020-01-29ala(s)19.08.20.png', 'https://paseodelvalle.cl/backend-paseodelvalle/img/1588264521cafe.png', 'img/1588264521cafe.png', 20, 1, NULL),
+(24, 'Rapside', '', '', '', '', 'https://paseodelvalle.cl/backend-paseodelvalle/img/1588264859CapturadePantalla2020-01-29ala(s)19.11.08.png', 'img/1588264859CapturadePantalla2020-01-29ala(s)19.11.08.png', 'https://paseodelvalle.cl/backend-paseodelvalle/img/1588264859rapside.png', 'img/1588264859rapside.png', 16, 1, NULL),
+(25, 'Astonland', '', '', '', '', 'https://paseodelvalle.cl/backend-paseodelvalle/img/1588265434CapturadePantalla2020-01-29ala(s)19.07.20.png', 'img/1588265434CapturadePantalla2020-01-29ala(s)19.07.20.png', 'https://paseodelvalle.cl/backend-paseodelvalle/img/1588265434astoland.png', 'img/1588265434astoland.png', 16, 1, NULL),
+(26, 'Almazara', '', 'Nivel 2', '', '', 'https://paseodelvalle.cl/backend-paseodelvalle/img/1588265813CapturadePantalla2020-01-29ala(s)19.08.25.png', 'img/1588265813CapturadePantalla2020-01-29ala(s)19.08.25.png', 'https://paseodelvalle.cl/backend-paseodelvalle/img/158826581312936663_484578711729258_2131450293908053656_n.jpg', 'img/158826581312936663_484578711729258_2131450293908053656_n.jpg', 20, 1, NULL),
+(27, 'Copy Center', '01', '', '', '', 'https://paseodelvalle.cl/backend-paseodelvalle/img/1588266239CapturadePantalla2020-01-29ala(s)19.09.08.png', 'img/1588266239CapturadePantalla2020-01-29ala(s)19.09.08.png', 'https://paseodelvalle.cl/backend-paseodelvalle/img/1588266239copycenter.png', 'img/1588266239copycenter.png', 11, 1, NULL),
+(28, 'BelloSol Hindu', '', '', '', '', 'https://paseodelvalle.cl/backend-paseodelvalle/img/1588267754CapturadePantalla2020-01-29ala(s)19.12.50.png', 'img/1588267754CapturadePantalla2020-01-29ala(s)19.12.50.png', 'https://paseodelvalle.cl/backend-paseodelvalle/img/1588267754BELLOSOL.png', 'img/1588267754BELLOSOL.png', 19, 1, NULL),
+(29, 'Global Store', '', 'Nivel 1', '', '', 'https://paseodelvalle.cl/backend-paseodelvalle/img/1588268268CapturadePantalla2020-01-29ala(s)19.08.55.png', 'img/1588268268CapturadePantalla2020-01-29ala(s)19.08.55.png', 'https://paseodelvalle.cl/backend-paseodelvalle/img/1588268268globalStore.png', 'img/1588268268globalStore.png', 19, 1, NULL),
+(30, 'Optica S&G', '', '', '', '', 'https://paseodelvalle.cl/backend-paseodelvalle/img/1588268453CapturadePantalla2020-01-29ala(s)19.09.02.png', 'img/1588268453CapturadePantalla2020-01-29ala(s)19.09.02.png', 'https://paseodelvalle.cl/backend-paseodelvalle/img/1588268453OPTICA.png', 'img/1588268453OPTICA.png', 8, 1, NULL),
+(31, 'Brujas', '', '', '', '', 'https://paseodelvalle.cl/backend-paseodelvalle/img/1588271185CapturadePantalla2020-01-29ala(s)19.12.29.png', 'img/1588271185CapturadePantalla2020-01-29ala(s)19.12.29.png', 'https://paseodelvalle.cl/backend-paseodelvalle/img/1588271185blanco.png', 'img/1588271185blanco.png', 14, 1, NULL);
 
 -- --------------------------------------------------------
 
@@ -355,7 +370,8 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`id`, `nombre`, `apellido`, `rut`, `email`, `telefono`, `usuario`, `passwd`, `last_date`, `foto`, `foto_deleted`) VALUES
-(1, 'Yonatan', 'Pizarro', '18.420.862-8', 'yonatanpizarro21@hotmail.com', '+56940186603', 'xjonatanx', 'jonatan2', '2020-01-29 23:37:54', 'http://proyectos-yonatan.000webhostapp.com/backend-paseodelvalle/img/157870442368586807_2449786621919103_2026587328004227072_o.jpg', 'img/157870442368586807_2449786621919103_2026587328004227072_o.jpg');
+(2, 'Claudio', 'Pizarro', 'NO APLICA', 'NO APLICA', 'NO APLICA', 'cpizarro@paseodelvalle', 'martin07', '2020-04-27 10:07:40', 'https://paseodelvalle.cl/backend-paseodelvalle/img/claudio.jpg', 'img/claudio.jpg'),
+(3, 'Yonatan', 'Pizarro', 'NO APLICA', 'NO APLICA', 'NO APLICA', 'yonatanpizarro21@hotmail.com', 'jonatan2', '2020-04-27 10:07:40', 'https://paseodelvalle.cl/backend-paseodelvalle/img/157870442368586807_2449786621919103_2026587328004227072_o.jpg', 'img/157870442368586807_2449786621919103_2026587328004227072_o.jpg');
 
 --
 -- Índices para tablas volcadas
@@ -496,7 +512,7 @@ ALTER TABLE `contenido_nuestro`
 -- AUTO_INCREMENT de la tabla `eventos`
 --
 ALTER TABLE `eventos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT de la tabla `inicio`
@@ -508,7 +524,7 @@ ALTER TABLE `inicio`
 -- AUTO_INCREMENT de la tabla `mall`
 --
 ALTER TABLE `mall`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `noticias`
@@ -526,25 +542,25 @@ ALTER TABLE `slider_nuestro`
 -- AUTO_INCREMENT de la tabla `slider_principal_inicio`
 --
 ALTER TABLE `slider_principal_inicio`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
 
 --
 -- AUTO_INCREMENT de la tabla `slider_secundario_inicio`
 --
 ALTER TABLE `slider_secundario_inicio`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT de la tabla `tienda`
 --
 ALTER TABLE `tienda`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 
 --
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- Restricciones para tablas volcadas
