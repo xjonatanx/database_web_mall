@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost:3306
--- Tiempo de generación: 07-05-2020 a las 14:53:20
+-- Tiempo de generación: 09-05-2020 a las 17:10:33
 -- Versión del servidor: 5.7.30
 -- Versión de PHP: 7.3.6
 
@@ -276,6 +276,27 @@ INSERT INTO `slider_principal_inicio` (`id`, `img_inicio`, `img_deleted`, `fk_id
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `slider_principal_inicio_responsive`
+--
+
+CREATE TABLE `slider_principal_inicio_responsive` (
+  `id` int(11) NOT NULL,
+  `img_inicio` varchar(200) NOT NULL,
+  `img_deleted` varchar(300) NOT NULL,
+  `fk_id_mall` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `slider_principal_inicio_responsive`
+--
+
+INSERT INTO `slider_principal_inicio_responsive` (`id`, `img_inicio`, `img_deleted`, `fk_id_mall`) VALUES
+(6, 'https://paseodelvalle.cl/backend-paseodelvalle/img/15890566551588086132350x194_IMPORTANTE.png', 'img/15890566551588086132350x194_IMPORTANTE.png', 1),
+(7, 'https://paseodelvalle.cl/backend-paseodelvalle/img/15890566641588086111350x194_CARTELERA_aviso.png', 'img/15890566641588086111350x194_CARTELERA_aviso.png', 1);
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `slider_secundario_inicio`
 --
 
@@ -292,6 +313,26 @@ CREATE TABLE `slider_secundario_inicio` (
 
 INSERT INTO `slider_secundario_inicio` (`id`, `img_inicio`, `img_deleted`, `fk_id_mall`) VALUES
 (12, 'https://paseodelvalle.cl/backend-paseodelvalle/img/1588092255Bannerabajo.png', 'img/1588092255Bannerabajo.png', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `slider_secundario_inicio_responsive`
+--
+
+CREATE TABLE `slider_secundario_inicio_responsive` (
+  `id` int(11) NOT NULL,
+  `img_inicio` varchar(200) NOT NULL,
+  `img_deleted` varchar(300) NOT NULL,
+  `fk_id_mall` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `slider_secundario_inicio_responsive`
+--
+
+INSERT INTO `slider_secundario_inicio_responsive` (`id`, `img_inicio`, `img_deleted`, `fk_id_mall`) VALUES
+(3, 'https://paseodelvalle.cl/backend-paseodelvalle/img/15890578051588093073350x194_NOTICIAS.png', 'img/15890578051588093073350x194_NOTICIAS.png', 1);
 
 -- --------------------------------------------------------
 
@@ -454,11 +495,25 @@ ALTER TABLE `slider_principal_inicio`
   ADD KEY `fk_slider_principal_tienda` (`fk_id_mall`);
 
 --
+-- Indices de la tabla `slider_principal_inicio_responsive`
+--
+ALTER TABLE `slider_principal_inicio_responsive`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `fk_id_mall_slider_inicio_resp` (`fk_id_mall`);
+
+--
 -- Indices de la tabla `slider_secundario_inicio`
 --
 ALTER TABLE `slider_secundario_inicio`
   ADD PRIMARY KEY (`id`),
   ADD KEY `fk_slider_secundario_tienda` (`fk_id_mall`);
+
+--
+-- Indices de la tabla `slider_secundario_inicio_responsive`
+--
+ALTER TABLE `slider_secundario_inicio_responsive`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `fk_id_mall_slider_secundario_resp` (`fk_id_mall`);
 
 --
 -- Indices de la tabla `tienda`
@@ -545,16 +600,28 @@ ALTER TABLE `slider_principal_inicio`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
 
 --
+-- AUTO_INCREMENT de la tabla `slider_principal_inicio_responsive`
+--
+ALTER TABLE `slider_principal_inicio_responsive`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
 -- AUTO_INCREMENT de la tabla `slider_secundario_inicio`
 --
 ALTER TABLE `slider_secundario_inicio`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
+-- AUTO_INCREMENT de la tabla `slider_secundario_inicio_responsive`
+--
+ALTER TABLE `slider_secundario_inicio_responsive`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
 -- AUTO_INCREMENT de la tabla `tienda`
 --
 ALTER TABLE `tienda`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
 --
 -- AUTO_INCREMENT de la tabla `usuarios`
@@ -627,10 +694,22 @@ ALTER TABLE `slider_principal_inicio`
   ADD CONSTRAINT `fk_slider_principal_tienda` FOREIGN KEY (`fk_id_mall`) REFERENCES `mall` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
+-- Filtros para la tabla `slider_principal_inicio_responsive`
+--
+ALTER TABLE `slider_principal_inicio_responsive`
+  ADD CONSTRAINT `fk_id_mall_slider_inicio_resp` FOREIGN KEY (`fk_id_mall`) REFERENCES `mall` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
 -- Filtros para la tabla `slider_secundario_inicio`
 --
 ALTER TABLE `slider_secundario_inicio`
   ADD CONSTRAINT `fk_slider_secundario_tienda` FOREIGN KEY (`fk_id_mall`) REFERENCES `mall` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Filtros para la tabla `slider_secundario_inicio_responsive`
+--
+ALTER TABLE `slider_secundario_inicio_responsive`
+  ADD CONSTRAINT `fk_id_mall_slider_secundario_resp` FOREIGN KEY (`fk_id_mall`) REFERENCES `mall` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Filtros para la tabla `tienda`
