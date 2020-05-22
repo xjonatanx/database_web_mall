@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost:3306
--- Tiempo de generación: 09-05-2020 a las 17:10:33
+-- Tiempo de generación: 18-05-2020 a las 10:37:49
 -- Versión del servidor: 5.7.30
 -- Versión de PHP: 7.3.6
 
@@ -179,7 +179,7 @@ CREATE TABLE `inicio` (
 --
 
 INSERT INTO `inicio` (`id`, `eventos_img`, `eventos_img_deleted`, `noticias_img`, `noticias_img_deleted`, `cartelera_img`, `cartelera_img_deleted`, `fk_id_mall`) VALUES
-(8, 'https://paseodelvalle.cl/backend-paseodelvalle/img/1588093073350x194_NOTICIAS.png', 'img/1588093073350x194_NOTICIAS.png', 'https://paseodelvalle.cl/backend-paseodelvalle/img/1588086132350x194_IMPORTANTE.png', 'img/1588086132350x194_IMPORTANTE.png', 'https://paseodelvalle.cl/backend-paseodelvalle/img/1588086111350x194_CARTELERA_aviso.png', 'img/1588086111350x194_CARTELERA_aviso.png', 1);
+(8, 'https://paseodelvalle.cl/backend-paseodelvalle/img/1589565754350x194_EVENTOS.png', 'img/1589565754350x194_EVENTOS.png', 'https://paseodelvalle.cl/backend-paseodelvalle/img/1588086132350x194_IMPORTANTE.png', 'img/1588086132350x194_IMPORTANTE.png', 'https://paseodelvalle.cl/backend-paseodelvalle/img/1588086111350x194_CARTELERA_aviso.png', 'img/1588086111350x194_CARTELERA_aviso.png', 1);
 
 -- --------------------------------------------------------
 
@@ -312,7 +312,7 @@ CREATE TABLE `slider_secundario_inicio` (
 --
 
 INSERT INTO `slider_secundario_inicio` (`id`, `img_inicio`, `img_deleted`, `fk_id_mall`) VALUES
-(12, 'https://paseodelvalle.cl/backend-paseodelvalle/img/1588092255Bannerabajo.png', 'img/1588092255Bannerabajo.png', 1);
+(14, 'https://paseodelvalle.cl/backend-paseodelvalle/img/1589566312Banner la ogazzaa.png', 'img/1589566312Banner la ogazzaa.png', 1);
 
 -- --------------------------------------------------------
 
@@ -332,7 +332,7 @@ CREATE TABLE `slider_secundario_inicio_responsive` (
 --
 
 INSERT INTO `slider_secundario_inicio_responsive` (`id`, `img_inicio`, `img_deleted`, `fk_id_mall`) VALUES
-(3, 'https://paseodelvalle.cl/backend-paseodelvalle/img/15890578051588093073350x194_NOTICIAS.png', 'img/15890578051588093073350x194_NOTICIAS.png', 1);
+(4, 'https://paseodelvalle.cl/backend-paseodelvalle/img/1589565830350x194_EVENTOS.png', 'img/1589565830350x194_EVENTOS.png', 1);
 
 -- --------------------------------------------------------
 
@@ -609,13 +609,13 @@ ALTER TABLE `slider_principal_inicio_responsive`
 -- AUTO_INCREMENT de la tabla `slider_secundario_inicio`
 --
 ALTER TABLE `slider_secundario_inicio`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT de la tabla `slider_secundario_inicio_responsive`
 --
 ALTER TABLE `slider_secundario_inicio_responsive`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT de la tabla `tienda`
