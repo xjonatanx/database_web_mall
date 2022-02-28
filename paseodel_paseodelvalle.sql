@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.4
+-- version 4.9.7
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost:3306
--- Tiempo de generación: 18-05-2020 a las 10:37:49
--- Versión del servidor: 5.7.30
--- Versión de PHP: 7.3.6
+-- Tiempo de generación: 28-02-2022 a las 15:34:37
+-- Versión del servidor: 5.7.37
+-- Versión de PHP: 7.3.33
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -21,6 +21,30 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `paseodel_paseodelvalle`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `arriendos`
+--
+
+CREATE TABLE `arriendos` (
+  `id` int(11) NOT NULL,
+  `descripcion` varchar(900) COLLATE utf8_spanish_ci DEFAULT NULL,
+  `img_arriendo` varchar(900) COLLATE utf8_spanish_ci DEFAULT NULL,
+  `img_arriendo_deleted` varchar(900) COLLATE utf8_spanish_ci DEFAULT NULL,
+  `fecha` date DEFAULT NULL,
+  `fk_id_mall` int(11) NOT NULL,
+  `estado` varchar(300) COLLATE utf8_spanish_ci DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+--
+-- Volcado de datos para la tabla `arriendos`
+--
+
+INSERT INTO `arriendos` (`id`, `descripcion`, `img_arriendo`, `img_arriendo_deleted`, `fecha`, `fk_id_mall`, `estado`) VALUES
+(1, '<h6>N° Local: Módulo 1</h6><h6>Superficie: 6 mts</h6><h6>Nivel: Subnivel</h6><h6>Excelente Ubicación</h6><h6>-------------------------------------------</h6><h6>Contacto: +569 7499 0720</h6><h6>Correo: tsmith@paseodelvalle.cl</h6>', 'https://paseodelvalle.cl/backend-paseodelvalle/img/1645454176Modulo_1.png', 'img/1645454176Modulo_1.png', '2022-02-21', 1, 'DISPONIBLE'),
+(5, '<h6>N° Local: Módulo 2</h6><h6>Superficie: 6 mts</h6><h6>Nivel: Subnivel</h6><h6>Excelente Ubicación</h6><h6>-------------------------------------------</h6><h6>Contacto: +569 7499 0720</h6><h6>Correo: tsmith@paseodelvalle.cl</h6>', 'https://paseodelvalle.cl/backend-paseodelvalle/img/1645476448Modulo_2.png', 'img/1645476448Modulo_2.png', '2022-02-21', 1, 'DISPONIBLE');
 
 -- --------------------------------------------------------
 
@@ -155,7 +179,11 @@ CREATE TABLE `eventos` (
 --
 
 INSERT INTO `eventos` (`id`, `img_slider`, `img_slider_deleted`, `descripcion`, `principal`, `fk_id_mall`) VALUES
-(10, 'https://paseodelvalle.cl/backend-paseodelvalle/img/1588092219350x194_NOTICIAS.png', 'img/1588092219350x194_NOTICIAS.png', '<p>Pronto disfrutaremos de un gran día!</p>', 0, 1);
+(12, 'https://paseodelvalle.cl/backend-paseodelvalle/img/1627418779EVENTO CINE.png', 'img/1627418779EVENTO CINE.png', '<p>Ven a Paseo del Valle y participa en el sorteo de espectaculares premios.</p><p>Por compras sobre $5.000.- recibe tu cupón, llénalo con tus datos y deposítalo en el buzón que encontrarás en el centro comercial. Podrás ganar una TABLET o AUDÍFONOS GAMER o FICHAS SUPER LAND. </p><p>Promoción válida hasta el 07 de AGOSTO del 2021. Sorteo 07 de AGOSTO solo cupones válidos en locales de Paseo del Valle, no participa Unimarc, Johnson o Paris.&nbsp;</p><p>Foto premios sólo referencial.</p>', 0, 1),
+(13, 'https://paseodelvalle.cl/backend-paseodelvalle/img/1630944748EVENTO.png', 'img/1630944748EVENTO.png', '<p><strong>9 DE SEPTIEMBRE ABRIMOS!!!</strong></p><p>FINALMENTE LLEGÓ EL MOMENTO!!!</p><p>Desde el 9 de Septiembre volvamos a disfrutar la magia del cine de forma cómoda, limpia y segura en Cine Paseo del Valle, Quillota.</p><p>Al comprar tu ticket deberás tener:</p><p>• Tu pase de movilidad y tu cédula de identidad</p><p>• Mascarilla</p><p>• Respetar las normas de seguridad del Cine ante el Covid-19</p>', 0, 1),
+(14, 'https://paseodelvalle.cl/backend-paseodelvalle/img/1630937884septiembre.png', 'img/1630937884septiembre.png', '<p>GRAN SORTEO FIESTAS PATRIAS!!!</p><p>Ven a Paseo del Valle y participa en el sorteo de espectaculares premios.</p><p>Por compras sobre $5.000.- recibe tu cupón, llénalo con tus datos y deposítalo en el buzón que encontrarás en el centro comercial. Podrás ganar una PARRILLA ELÉCTRICA o PACK DE VINOS o SET PARRILLERO.</p><p>Promoción válida hasta el 15 de septiembre del 2021. Sorteo 15 de SEPTIEMBRE solo cupones válidos en locales de Paseo del Valle, no participa Unimarc y Paris.&nbsp;</p><p>Foto premios sólo referencial</p>', 0, 1),
+(17, 'https://paseodelvalle.cl/backend-paseodelvalle/img/1640008462EVENTO Violin.png', 'img/1640008462EVENTO Violin.png', '<p>MUSICA EN VIVO en Mall Paseo del Valle, Quillota.</p><p>Hoy lunes 20 al 24 de diciembre de 12:00 a 13:00 hrs</p><p>Te invitamos a disfrutar concierto de Navidad con RAÚL FIGUEROA Violinista Profesional.</p><p>ENTRADA LIBERADA</p><p><a href=\"https://l.facebook.com/l.php?u=http%3A%2F%2Fwww.paseodelvalle.cl%2F%3Ffbclid%3DIwAR3duadrF1NPSBaercHhbE06YedzYCp5CPwH0dUEi0kbTQkTfuVs491mZKw&amp;h=AT1J46kw9jScRHZEI9Qc6im6AAVnORxs-qO0pn8vqeKoTx-gQRnZosQ6aTESNAJd6Sc9JTpfAIDAKhckWEP47y1jHZ2AbPIHEB70SOp9yNOHs7H8tgxujOouCdhcjafE1JeU8JE&amp;__tn__=-UK-R&amp;c[0]=AT0Q_dmIilk93Jv0fb28Z6KJfxIyHw_Qe3Q-Gp21eQFdZphv1m954IoH92LmQAkFl7mteBOuSIQFjfw0E4VcfNGRU4fttoarJw1l-e8ulgCadEc_fygowfoPIPkVMBcEtgwfUBJEla2hysBMosFbYaGa7pAV6VX5W7w5mSMV8jSHyF2CVteX2VOvQbGRp9V__jSuHoXM\" rel=\"noopener noreferrer\" target=\"_blank\">www.paseodelvalle.cl</a></p>', 0, 1),
+(18, 'https://paseodelvalle.cl/backend-paseodelvalle/img/1645024606GANADORES_SAN VALENTIN.png', 'img/1645024606GANADORES_SAN VALENTIN.png', '<p>Felices los ganadores este \"San Valentín\" 14 de febrero.</p><p>Un rico Desayuno <span style=\"color: rgb(38, 38, 38);\">del \"Valle café Bistro\" a su hogar</span> y un espectacular \"Aperitivo\", <span style=\"color: rgb(38, 38, 38);\">gracias por preferirnos. Ambos de nuestra comuna de Quillota. </span></p><p><span style=\"color: rgb(38, 38, 38);\">El próximo puedes ser tú!!!!</span></p>', 1, 1);
 
 -- --------------------------------------------------------
 
@@ -169,6 +197,8 @@ CREATE TABLE `inicio` (
   `eventos_img_deleted` varchar(300) COLLATE utf8_spanish_ci DEFAULT NULL,
   `noticias_img` varchar(300) COLLATE utf8_spanish_ci DEFAULT NULL,
   `noticias_img_deleted` varchar(300) COLLATE utf8_spanish_ci DEFAULT NULL,
+  `arriendo_img` varchar(800) COLLATE utf8_spanish_ci DEFAULT NULL,
+  `arriendo_img_deleted` varchar(800) COLLATE utf8_spanish_ci DEFAULT NULL,
   `cartelera_img` varchar(300) COLLATE utf8_spanish_ci DEFAULT NULL,
   `cartelera_img_deleted` varchar(300) COLLATE utf8_spanish_ci DEFAULT NULL,
   `fk_id_mall` int(11) NOT NULL
@@ -178,8 +208,8 @@ CREATE TABLE `inicio` (
 -- Volcado de datos para la tabla `inicio`
 --
 
-INSERT INTO `inicio` (`id`, `eventos_img`, `eventos_img_deleted`, `noticias_img`, `noticias_img_deleted`, `cartelera_img`, `cartelera_img_deleted`, `fk_id_mall`) VALUES
-(8, 'https://paseodelvalle.cl/backend-paseodelvalle/img/1589565754350x194_EVENTOS.png', 'img/1589565754350x194_EVENTOS.png', 'https://paseodelvalle.cl/backend-paseodelvalle/img/1588086132350x194_IMPORTANTE.png', 'img/1588086132350x194_IMPORTANTE.png', 'https://paseodelvalle.cl/backend-paseodelvalle/img/1588086111350x194_CARTELERA_aviso.png', 'img/1588086111350x194_CARTELERA_aviso.png', 1);
+INSERT INTO `inicio` (`id`, `eventos_img`, `eventos_img_deleted`, `noticias_img`, `noticias_img_deleted`, `arriendo_img`, `arriendo_img_deleted`, `cartelera_img`, `cartelera_img_deleted`, `fk_id_mall`) VALUES
+(8, 'https://paseodelvalle.cl/backend-paseodelvalle/img/1645128743GANADORES_SAN VALENTIN.png', 'img/1645128743GANADORES_SAN VALENTIN.png', 'https://paseodelvalle.cl/backend-paseodelvalle/img/1637262806compra online copia.png', 'img/1637262806compra online copia.png', 'https://paseodelvalle.cl/backend-paseodelvalle/img/1645461169ARRIENDO 2.png', 'img/1645461169ARRIENDO 2.png', 'https://paseodelvalle.cl/backend-paseodelvalle/img/1645125598350x194.png', 'img/1645125598350x194.png', 1);
 
 -- --------------------------------------------------------
 
@@ -203,7 +233,7 @@ CREATE TABLE `mall` (
 --
 
 INSERT INTO `mall` (`id`, `nombre`, `telefono`, `apertura`, `cierre`, `direccion`, `logo`, `logo_deleted`) VALUES
-(1, 'MALL PASEO DEL VALLE', '(33) 247 0000', '9:00', '21:00', 'Ohiggins 176, Quillota, Valparaíso', 'https://paseodelvalle.cl/backend-paseodelvalle/img/1577130804logo.png', 'img/1577130804logo.png');
+(1, 'MALL PASEO DEL VALLE', '(33) 247 0000', '9:00', '20:30', 'Ohiggins 176, Quillota, Valparaíso', 'https://paseodelvalle.cl/backend-paseodelvalle/img/16268941031577130804logo (1).png', 'img/16268941031577130804logo (1).png');
 
 -- --------------------------------------------------------
 
@@ -228,7 +258,10 @@ CREATE TABLE `noticias` (
 
 INSERT INTO `noticias` (`id`, `titulo`, `subtitulo`, `descripcion`, `fecha_publicacion`, `img_noticia`, `img_noticia_deleted`, `fk_id_mall`) VALUES
 (3, 'Pinta Caritas en Paseo del Valle', 'Evento especial para los niños', '<p>Muy felices quedan los niños que participán en el Pinta Cartitas que organiza Paseo del Valle.</p>', '2020-01-29', 'https://paseodelvalle.cl/backend-paseodelvalle/img/1580335470pintacaritas.png', 'img/1580335470pintacaritas.png', 1),
-(4, 'Bingo Familiares', 'Actividad que reune a la familia', '<p>Todos los domingos del mes de Noviembre se realizaron bingos familiares, familias completas participan de esta actividad... niños, abuelos, parejas... en febrero comenzamos nuevamente.</p>', '2020-01-29', 'https://paseodelvalle.cl/backend-paseodelvalle/img/1580335912bingo.png', 'img/1580335912bingo.png', 1);
+(4, 'Bingo Familiares', 'Actividad que reune a la familia', '<p>Todos los domingos del mes de Noviembre se realizaron bingos familiares, familias completas participan de esta actividad... niños, abuelos, parejas... en febrero comenzamos nuevamente.</p>', '2020-01-29', 'https://paseodelvalle.cl/backend-paseodelvalle/img/1580335912bingo.png', 'img/1580335912bingo.png', 1),
+(5, 'PRONTO!!!', 'Nos estamos preparando para recibirte', '<p> </p>', '2021-07-27', 'https://paseodelvalle.cl/backend-paseodelvalle/img/1627418969PREPARANDO_CINE.png', 'img/1627418969PREPARANDO_CINE.png', 1),
+(6, 'FELIZ DIA DEL NIÑO 8 DE AGOSTO', 'Gana espectaculares premios', '<p>Ven a Paseo del Valle y participa en el sorteo de espectaculares premios.</p><p>Por compras sobre $5.000.- recibe tu cupón, llénalo con tus datos y deposítalo en el buzón que encontrarás en el centro comercial. Podrás ganar una TABLET o AUDÍFONOS GAMER o FICHAS SUPER LAND. </p><p>Promoción válida hasta el 07 de AGOSTO del 2021. Sorteo 07 de AGOSTO solo cupones válidos en locales de Paseo del Valle, no participa Unimarc, Johnson o Paris.&nbsp;</p><p>Foto premios sólo referencial.</p>', '2021-07-27', 'https://paseodelvalle.cl/backend-paseodelvalle/img/1627419185DIADELNIÑOO.png', 'img/1627419185DIADELNIÑOO.png', 1),
+(7, 'COMPRA ONLINE TU ENTRADA AL CINE PASEO DEL VALLE', 'Olvídate de las filas y ahorra tiempo!!!', '<p>AHORA...COMPRA TU TICKET ONLINE!!!</p><p>en Cine Paseo del Valle, Quillota.</p><p>• AHORRA TIEMPO</p><p>• OLVÍDATE DE LAS FILAS</p><p>Pasos para comprar:</p><p>1.- Ingresar a página web: www.cinepaseodelvalle.cl y lickear sobre el ícono de compra de entradas online. (puede ser en el header o dentro de cada película)</p><p>2.- Seleccionar película y clickear sobre “Comprar”</p><p>3.- Una vez clickeado el botón comprar, se debe registrar en el sistema, completando los campos básicos que se exigen, Rut, Nombre, Apellido, Mail, Clave.</p><p>4.- Seleccionar butacas y finalizar compra.</p><p>Más información de horarios y próximos estrenos en www.cinepaseodelvalle.cl</p>', '2022-01-06', 'https://paseodelvalle.cl/backend-paseodelvalle/img/1641488059COMPRA_ONLINE.png', 'img/1641488059COMPRA_ONLINE.png', 1);
 
 -- --------------------------------------------------------
 
@@ -260,18 +293,19 @@ CREATE TABLE `slider_principal_inicio` (
   `id` int(11) NOT NULL,
   `img_inicio` varchar(200) COLLATE utf8_spanish_ci DEFAULT NULL,
   `img_deleted` varchar(300) COLLATE utf8_spanish_ci DEFAULT NULL,
-  `fk_id_mall` int(11) NOT NULL
+  `fk_id_mall` int(11) NOT NULL,
+  `orden` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 --
 -- Volcado de datos para la tabla `slider_principal_inicio`
 --
 
-INSERT INTO `slider_principal_inicio` (`id`, `img_inicio`, `img_deleted`, `fk_id_mall`) VALUES
-(42, 'https://paseodelvalle.cl/backend-paseodelvalle/img/1588086000emocion.png', 'img/1588086000emocion.png', 1),
-(44, 'https://paseodelvalle.cl/backend-paseodelvalle/img/1588086027HorariosUNIMARC.png', 'img/1588086027HorariosUNIMARC.png', 1),
-(45, 'https://paseodelvalle.cl/backend-paseodelvalle/img/1588092780horarioecofarmacia.png', 'img/1588092780horarioecofarmacia.png', 1),
-(46, 'https://paseodelvalle.cl/backend-paseodelvalle/img/15886008245consejos.png', 'img/15886008245consejos.png', 1);
+INSERT INTO `slider_principal_inicio` (`id`, `img_inicio`, `img_deleted`, `fk_id_mall`, `orden`) VALUES
+(62, 'https://paseodelvalle.cl/backend-paseodelvalle/img/1627417665Banner la ogazzaa.png', 'img/1627417665Banner la ogazzaa.png', 1, 5),
+(67, 'https://paseodelvalle.cl/backend-paseodelvalle/img/1631301818+ emocion.png', 'img/1631301818+ emocion.png', 1, 3),
+(79, 'https://paseodelvalle.cl/backend-paseodelvalle/img/1641487803COMPRA ONLINE..png', 'img/1641487803COMPRA ONLINE..png', 1, 2),
+(80, 'https://paseodelvalle.cl/backend-paseodelvalle/img/1642021305WEB_VERANO 2022.png', 'img/1642021305WEB_VERANO 2022.png', 1, 1);
 
 -- --------------------------------------------------------
 
@@ -283,16 +317,16 @@ CREATE TABLE `slider_principal_inicio_responsive` (
   `id` int(11) NOT NULL,
   `img_inicio` varchar(200) NOT NULL,
   `img_deleted` varchar(300) NOT NULL,
-  `fk_id_mall` int(11) NOT NULL
+  `fk_id_mall` int(11) NOT NULL,
+  `orden` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `slider_principal_inicio_responsive`
 --
 
-INSERT INTO `slider_principal_inicio_responsive` (`id`, `img_inicio`, `img_deleted`, `fk_id_mall`) VALUES
-(6, 'https://paseodelvalle.cl/backend-paseodelvalle/img/15890566551588086132350x194_IMPORTANTE.png', 'img/15890566551588086132350x194_IMPORTANTE.png', 1),
-(7, 'https://paseodelvalle.cl/backend-paseodelvalle/img/15890566641588086111350x194_CARTELERA_aviso.png', 'img/15890566641588086111350x194_CARTELERA_aviso.png', 1);
+INSERT INTO `slider_principal_inicio_responsive` (`id`, `img_inicio`, `img_deleted`, `fk_id_mall`, `orden`) VALUES
+(11, 'https://paseodelvalle.cl/backend-paseodelvalle/img/1627399394Banner la ogazzaa.png', 'img/1627399394Banner la ogazzaa.png', 1, 1);
 
 -- --------------------------------------------------------
 
@@ -304,15 +338,16 @@ CREATE TABLE `slider_secundario_inicio` (
   `id` int(11) NOT NULL,
   `img_inicio` varchar(300) COLLATE utf8_spanish_ci NOT NULL,
   `img_deleted` varchar(300) COLLATE utf8_spanish_ci NOT NULL,
-  `fk_id_mall` int(11) NOT NULL
+  `fk_id_mall` int(11) NOT NULL,
+  `orden` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 --
 -- Volcado de datos para la tabla `slider_secundario_inicio`
 --
 
-INSERT INTO `slider_secundario_inicio` (`id`, `img_inicio`, `img_deleted`, `fk_id_mall`) VALUES
-(14, 'https://paseodelvalle.cl/backend-paseodelvalle/img/1589566312Banner la ogazzaa.png', 'img/1589566312Banner la ogazzaa.png', 1);
+INSERT INTO `slider_secundario_inicio` (`id`, `img_inicio`, `img_deleted`, `fk_id_mall`, `orden`) VALUES
+(15, 'https://paseodelvalle.cl/backend-paseodelvalle/img/16273994955consejos.png', 'img/16273994955consejos.png', 1, 1);
 
 -- --------------------------------------------------------
 
@@ -324,15 +359,9 @@ CREATE TABLE `slider_secundario_inicio_responsive` (
   `id` int(11) NOT NULL,
   `img_inicio` varchar(200) NOT NULL,
   `img_deleted` varchar(300) NOT NULL,
-  `fk_id_mall` int(11) NOT NULL
+  `fk_id_mall` int(11) NOT NULL,
+  `orden` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Volcado de datos para la tabla `slider_secundario_inicio_responsive`
---
-
-INSERT INTO `slider_secundario_inicio_responsive` (`id`, `img_inicio`, `img_deleted`, `fk_id_mall`) VALUES
-(4, 'https://paseodelvalle.cl/backend-paseodelvalle/img/1589565830350x194_EVENTOS.png', 'img/1589565830350x194_EVENTOS.png', 1);
 
 -- --------------------------------------------------------
 
@@ -361,14 +390,13 @@ CREATE TABLE `tienda` (
 --
 
 INSERT INTO `tienda` (`id`, `nombre`, `numero_local`, `ubicacion`, `telefono`, `sitio_web`, `img_logo`, `img_logo_deleted`, `img_slider`, `img_slider_deleted`, `fk_id_categoria`, `fk_id_mall`, `descripcion`) VALUES
-(2, 'Troglodita', '3', 'Patio de Comidas', '222 0130440', 'www.tgdt.cl', 'https://paseodelvalle.cl/backend-paseodelvalle/img/1580327036troglodita-logo.jpg', 'img/1580327036troglodita-logo.jpg', 'https://paseodelvalle.cl/backend-paseodelvalle/img/1580327036SLIDERS-MECHADAS-500-C.png', 'img/1580327036SLIDERS-MECHADAS-500-C.png', 7, 1, 'Patio de comidas'),
 (3, 'WOM', 'B2', '2 nivel', ' ', 'www.wom.cl', 'https://paseodelvalle.cl/backend-paseodelvalle/img/1580329433logo_wom.jpeg', 'img/1580329433logo_wom.jpeg', 'https://paseodelvalle.cl/backend-paseodelvalle/img/1580329433wom_sider.png', 'img/1580329433wom_sider.png', 11, 1, 'Telefonía'),
 (4, 'Isapre Colmena', 'C4', '3 nivel', '', 'http://www.colmena.cl/', 'https://paseodelvalle.cl/backend-paseodelvalle/img/1580330016logo_colmena.png', 'img/1580330016logo_colmena.png', 'https://paseodelvalle.cl/backend-paseodelvalle/img/1580330016banner colmena.png', 'img/1580330016banner colmena.png', 11, 1, NULL),
 (6, 'Doggis', '1-2', 'Patio de Comidas', '', 'www.doggis.cl', 'https://paseodelvalle.cl/backend-paseodelvalle/img/1584540028logo-doggis.jpg', 'img/1584540028logo-doggis.jpg', 'https://paseodelvalle.cl/backend-paseodelvalle/img/1580330974Banner doggis.png', 'img/1580330974Banner doggis.png', 7, 1, NULL),
 (7, 'Eco Farmacia', 'A2', 'Nivel Calle', '', 'https://www.ecofarmacias.cl/', 'https://paseodelvalle.cl/backend-paseodelvalle/img/1580331426logo_ecofarmacia.jpeg', 'img/1580331426logo_ecofarmacia.jpeg', 'https://paseodelvalle.cl/backend-paseodelvalle/img/1580331426Banner_ecofarmacia.png', 'img/1580331426Banner_ecofarmacia.png', 10, 1, NULL),
-(8, 'Monarch', '5', 'Segundo Nivel', '', '', 'https://paseodelvalle.cl/backend-paseodelvalle/img/1580331799logo_monarch.png', 'img/1580331799logo_monarch.png', 'https://paseodelvalle.cl/backend-paseodelvalle/img/1580331799Captura de pantalla 2020-01-29 a la(s) 18.02.04.png', 'img/1580331799Captura de pantalla 2020-01-29 a la(s) 18.02.04.png', 19, 1, NULL),
+(8, 'Monarch', '5', 'Segundo Nivel', ' ', 'www.monarch.cl', 'https://paseodelvalle.cl/backend-paseodelvalle/img/1580331799logo_monarch.png', 'img/1580331799logo_monarch.png', 'https://paseodelvalle.cl/backend-paseodelvalle/img/1580331799Captura de pantalla 2020-01-29 a la(s) 18.02.04.png', 'img/1580331799Captura de pantalla 2020-01-29 a la(s) 18.02.04.png', 19, 1, ' '),
 (10, 'Unimarc', '3', 'Nivel Calle', '', 'https://www.unimarc.cl/', 'https://paseodelvalle.cl/backend-paseodelvalle/img/1580332223logo_unimarc.jpg', 'img/1580332223logo_unimarc.jpg', 'https://paseodelvalle.cl/backend-paseodelvalle/img/1580332223banner_unimarc.png', 'img/1580332223banner_unimarc.png', 9, 1, NULL),
-(11, 'Johnson', '4', 'Nivel 4', '', 'http://www.johnson.cl/', 'https://paseodelvalle.cl/backend-paseodelvalle/img/1584540471johnson.png', 'img/1584540471johnson.png', 'https://paseodelvalle.cl/backend-paseodelvalle/img/15845404711580331997banner_johnson.png', 'img/15845404711580331997banner_johnson.png', 13, 1, NULL),
+(11, 'Paris', '4', 'Nivel 2', ' ', 'http://www.paris.cl', 'https://paseodelvalle.cl/backend-paseodelvalle/img/1628861449PARIS.png', 'img/1628861449PARIS.png', 'https://paseodelvalle.cl/backend-paseodelvalle/img/1628861773PARIS.png', 'img/1628861773PARIS.png', 13, 1, ' '),
 (13, 'Bubble Gummers', '', '', '', '', 'https://paseodelvalle.cl/backend-paseodelvalle/img/1588259414BubbleGammers.png', 'img/1588259414BubbleGammers.png', 'https://paseodelvalle.cl/backend-paseodelvalle/img/1588259414BubbleGummers.png', 'img/1588259414BubbleGummers.png', 16, 1, NULL),
 (15, 'Pizza Hut', '', 'Patio de Comida', '', 'www.pizzahut.cl', 'https://paseodelvalle.cl/backend-paseodelvalle/img/1588259979CapturadePantalla2020-01-29ala(s)19.05.22.png', 'img/1588259979CapturadePantalla2020-01-29ala(s)19.05.22.png', 'https://paseodelvalle.cl/backend-paseodelvalle/img/1588259979pizzaHut.png', 'img/1588259979pizzaHut.png', 7, 1, NULL),
 (16, 'Tarragona', '', 'Patio de Comida', '', 'www.tarragona.cl', 'https://paseodelvalle.cl/backend-paseodelvalle/img/1588260686tarragona.png', 'img/1588260686tarragona.png', 'https://paseodelvalle.cl/backend-paseodelvalle/img/1588260686tarragonabanner.png', 'img/1588260686tarragonabanner.png', 7, 1, NULL),
@@ -376,7 +404,7 @@ INSERT INTO `tienda` (`id`, `nombre`, `numero_local`, `ubicacion`, `telefono`, `
 (19, 'La Ogazza', '9 y 10', '', '', '', 'https://paseodelvalle.cl/backend-paseodelvalle/img/1588261738laOgazza.png', 'img/1588261738laOgazza.png', 'https://paseodelvalle.cl/backend-paseodelvalle/img/1588261738Banner la ogazzaa.png', 'img/1588261738Banner la ogazzaa.png', 20, 1, NULL),
 (21, 'Amphora', '', '', '', '', 'https://paseodelvalle.cl/backend-paseodelvalle/img/1588262976CapturadePantalla2020-01-29ala(s)19.06.55.png', 'img/1588262976CapturadePantalla2020-01-29ala(s)19.06.55.png', 'https://paseodelvalle.cl/backend-paseodelvalle/img/1588262976amphora.png', 'img/1588262976amphora.png', 14, 1, NULL),
 (22, 'Jis Parking', '', '', '', '', 'https://paseodelvalle.cl/backend-paseodelvalle/img/1588263195CapturadePantalla2020-01-29ala(s)19.08.47.png', 'img/1588263195CapturadePantalla2020-01-29ala(s)19.08.47.png', 'https://paseodelvalle.cl/backend-paseodelvalle/img/1588263195Jiis.png', 'img/1588263195Jiis.png', 18, 1, NULL),
-(23, 'Café del Valle', '', '', '', '', 'https://paseodelvalle.cl/backend-paseodelvalle/img/1588264521CapturadePantalla2020-01-29ala(s)19.08.20.png', 'img/1588264521CapturadePantalla2020-01-29ala(s)19.08.20.png', 'https://paseodelvalle.cl/backend-paseodelvalle/img/1588264521cafe.png', 'img/1588264521cafe.png', 20, 1, NULL),
+(23, 'RusTik Cafetería', ' ', 'Sub Nivel', ' ', ' ', 'https://paseodelvalle.cl/backend-paseodelvalle/img/1628860871RUSTIK_CAFE.png', 'img/1628860871RUSTIK_CAFE.png', 'https://paseodelvalle.cl/backend-paseodelvalle/img/1588264521cafe.png', 'img/1588264521cafe.png', 20, 1, 'Ven a disfrutar, un rico café, pasteles y mucho más.'),
 (24, 'Rapside', '', '', '', '', 'https://paseodelvalle.cl/backend-paseodelvalle/img/1588264859CapturadePantalla2020-01-29ala(s)19.11.08.png', 'img/1588264859CapturadePantalla2020-01-29ala(s)19.11.08.png', 'https://paseodelvalle.cl/backend-paseodelvalle/img/1588264859rapside.png', 'img/1588264859rapside.png', 16, 1, NULL),
 (25, 'Astonland', '', '', '', '', 'https://paseodelvalle.cl/backend-paseodelvalle/img/1588265434CapturadePantalla2020-01-29ala(s)19.07.20.png', 'img/1588265434CapturadePantalla2020-01-29ala(s)19.07.20.png', 'https://paseodelvalle.cl/backend-paseodelvalle/img/1588265434astoland.png', 'img/1588265434astoland.png', 16, 1, NULL),
 (26, 'Almazara', '', 'Nivel 2', '', '', 'https://paseodelvalle.cl/backend-paseodelvalle/img/1588265813CapturadePantalla2020-01-29ala(s)19.08.25.png', 'img/1588265813CapturadePantalla2020-01-29ala(s)19.08.25.png', 'https://paseodelvalle.cl/backend-paseodelvalle/img/158826581312936663_484578711729258_2131450293908053656_n.jpg', 'img/158826581312936663_484578711729258_2131450293908053656_n.jpg', 20, 1, NULL),
@@ -411,12 +439,19 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`id`, `nombre`, `apellido`, `rut`, `email`, `telefono`, `usuario`, `passwd`, `last_date`, `foto`, `foto_deleted`) VALUES
-(2, 'Claudio', 'Pizarro', 'NO APLICA', 'NO APLICA', 'NO APLICA', 'cpizarro@paseodelvalle', 'martin07', '2020-04-27 10:07:40', 'https://paseodelvalle.cl/backend-paseodelvalle/img/claudio.jpg', 'img/claudio.jpg'),
+(2, 'Rafael', 'Pérez de Arce', 'NO APLICA', 'NO APLICA', 'NO APLICA', 'marketing@paseodelvalle.cl', 'Rafael2020', '2020-04-27 10:07:40', 'https://paseodelvalle.cl/backend-paseodelvalle/img/1626897925IMG_2152.JPG', 'img/1626897925IMG_2152.JPG'),
 (3, 'Yonatan', 'Pizarro', 'NO APLICA', 'NO APLICA', 'NO APLICA', 'yonatanpizarro21@hotmail.com', 'jonatan2', '2020-04-27 10:07:40', 'https://paseodelvalle.cl/backend-paseodelvalle/img/157870442368586807_2449786621919103_2026587328004227072_o.jpg', 'img/157870442368586807_2449786621919103_2026587328004227072_o.jpg');
 
 --
 -- Índices para tablas volcadas
 --
+
+--
+-- Indices de la tabla `arriendos`
+--
+ALTER TABLE `arriendos`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `fk_id_mall_arriendo` (`fk_id_mall`);
 
 --
 -- Indices de la tabla `cartelera`
@@ -534,6 +569,12 @@ ALTER TABLE `usuarios`
 --
 
 --
+-- AUTO_INCREMENT de la tabla `arriendos`
+--
+ALTER TABLE `arriendos`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
 -- AUTO_INCREMENT de la tabla `cartelera`
 --
 ALTER TABLE `cartelera`
@@ -567,7 +608,7 @@ ALTER TABLE `contenido_nuestro`
 -- AUTO_INCREMENT de la tabla `eventos`
 --
 ALTER TABLE `eventos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT de la tabla `inicio`
@@ -585,7 +626,7 @@ ALTER TABLE `mall`
 -- AUTO_INCREMENT de la tabla `noticias`
 --
 ALTER TABLE `noticias`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT de la tabla `slider_nuestro`
@@ -597,25 +638,25 @@ ALTER TABLE `slider_nuestro`
 -- AUTO_INCREMENT de la tabla `slider_principal_inicio`
 --
 ALTER TABLE `slider_principal_inicio`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=83;
 
 --
 -- AUTO_INCREMENT de la tabla `slider_principal_inicio_responsive`
 --
 ALTER TABLE `slider_principal_inicio_responsive`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT de la tabla `slider_secundario_inicio`
 --
 ALTER TABLE `slider_secundario_inicio`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT de la tabla `slider_secundario_inicio_responsive`
 --
 ALTER TABLE `slider_secundario_inicio_responsive`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `tienda`
@@ -632,6 +673,12 @@ ALTER TABLE `usuarios`
 --
 -- Restricciones para tablas volcadas
 --
+
+--
+-- Filtros para la tabla `arriendos`
+--
+ALTER TABLE `arriendos`
+  ADD CONSTRAINT `fk_id_mall_arriendo` FOREIGN KEY (`fk_id_mall`) REFERENCES `mall` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Filtros para la tabla `cartelera`
